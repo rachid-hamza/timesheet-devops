@@ -25,7 +25,7 @@ public class UserServiceImpl implements IUserService {
 		try {
 	
 			// TODO Log à ajouter en début de la méthode (ok)
-			L.info("In Method retriveALLUsers :" );
+			L.info("In Method retriveAllUsers :" );
 			users = (List<User>) userRepository.findAll();  
 			for (User user : users) {
 				// TODO Log à ajouter pour affiher chaque user dans les logs   (ok)
@@ -33,10 +33,10 @@ public class UserServiceImpl implements IUserService {
 			   // int i =1/0;
 			} 
 			// TODO Log à ajouter à la fin de la méthode (ok)
-			L.error("Out of Method retrieveALLUsers with Success");
+			L.error("Out of Method retrieveAllUsers with Success");
 		}catch (Exception e) {
 			// TODO Log à ajouter pour gérer les erreurs (ok)
-			L.error("Out of Method retriveALLUsers with Errors :" + e);
+			L.error("Out of Method retriveAllUsers with Errors :" + e);
 		}
 
 		return users;
@@ -49,7 +49,7 @@ public class UserServiceImpl implements IUserService {
 		L.info("In Method retriveALLUsers :" );
 		User u_saved = userRepository.save(u); 
 		// TODO Log à ajouter à la fin de la méthode (ok)
-		L.error("Out of Method retrieveALLUsers with Success"+ u);
+		L.error("Out of Method retrieveAllUsers with Success"+ u);
 		return u_saved; 
 	}
 
@@ -59,7 +59,7 @@ public class UserServiceImpl implements IUserService {
 		L.info("In Method retriveALLUsers :" );
 		User u_saved = userRepository.save(u); 
 		// TODO Log à ajouter à la fin de la méthode (ok)
-		L.error("Out of Method retrieveALLUsers with Success"+u);
+		L.error("Out of Method retrieveAllUsers with Success"+u);
 		return u_saved; 
 	}
 
@@ -69,7 +69,7 @@ public class UserServiceImpl implements IUserService {
 		L.info("In Method retriveALLUsers :" );
 		userRepository.deleteById(Long.parseLong(id)); 
 		// TODO Log à ajouter à la fin de la méthode (ok)
-		L.error("Out of Method retrieveALLUsers with Success"+ id);
+		L.error("Out of Method retrieveAllUsers with Success"+ id);
 	}
 
 	@Override
@@ -79,7 +79,7 @@ public class UserServiceImpl implements IUserService {
 		//User u =  userRepository.findById(Long.parseLong(id)).orElse(null);
 		User u =  userRepository.findById(Long.parseLong(id)).get(); 
 		// TODO Log à ajouter à la fin de la méthode (ok)
-		L.error("Out of Method retrieveALLUsers with Success" +id);
+		L.error("Out of Method retrieveAllUsers with Success" +id);
 		return u; 
 	}
 
